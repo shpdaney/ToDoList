@@ -1,0 +1,75 @@
+.ImputTask {
+  width: 100%;
+  min-height: 2rem;
+  padding: .4rem .8rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2rem 2rem;
+
+  background-color: rgba(var(--element-bg-rgb), 0.1);
+  border-radius: 0.5rem;
+
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    width: 1rem;
+    aspect-ratio: 1;
+    margin: 0;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      outline-color: var(--main-color);
+      //outline: 2px solid rgba(0, 146, 255, 1);
+    }
+  }
+  &__title {
+    margin-left: 1rem;
+  }
+  &__input {
+    flex-basis: 80%;
+    margin-left: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    font: 1rem/1 Roboto, sans-serif;
+  }
+
+  &__button {
+    padding: 0;
+    outline: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: opacity 300ms;
+
+    &Edit {
+      background-image: url("./images/edit.svg");
+    }
+
+    &Save {
+      background-image: url("./images/check.svg");
+    }
+
+    &Remove {
+      background-image: url("./images/trash.svg");
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--main-color);
+      border-radius: .5rem;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

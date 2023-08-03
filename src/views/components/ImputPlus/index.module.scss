@@ -1,0 +1,48 @@
+.ImputPlus {
+  width: 90%;
+  min-height: 2rem;
+  margin-top: 0.5rem;
+
+
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+
+  background-color: var(--content-bg-color);
+
+  &__input {
+    padding: 0 1rem;
+    font: 1rem/1 'Roboto', sans-serif;
+    background-color: rgba(var(--element-bg-rgb),0.1);
+
+    border: 1px solid lightgrey;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    outline: transparent;
+    &::placeholder {
+      color: var(--emtry-color);
+    }
+    &:focus {
+      border: 1px solid var(--main-color);
+    }
+  }
+  &__button {
+    outline: transparent;
+    border: none;
+    background-image: url("./images/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--main-color);
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    cursor: pointer;
+
+    transition: opacity 300ms;
+
+    &:focus {
+      outline: 1px solid rgba(0,146,255,1);
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
